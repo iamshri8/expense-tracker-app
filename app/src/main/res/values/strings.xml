@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">SIGN IN</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="sign_up">Don\'t have an account? Sign Up</string>
+    <string name="confirm_password_reg_hint">Confirm password</string>
+    <string name="sign_up_reg_button">SIGN UP</string>
+    <string name="sign_in_from_reg">Already have an acoount? Sign in</string>
+    <string name="reset_pwd_email_id_hint">Enter your email id here</string>
+    <string name="reset_password_btn">RESET PASSWORD</string>
+</resources>
