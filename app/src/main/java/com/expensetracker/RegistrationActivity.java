@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.regex.Pattern;
+
 public class RegistrationActivity extends AppCompatActivity {
 
     private EditText email;
@@ -53,7 +55,7 @@ public class RegistrationActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailVal = email.getText().toString().trim();
+                String emailVal = email.getText().toString().trim().toLowerCase();
                 String passwordVal = password.getText().toString().trim();
                 String confirmPasswordVal = confirmPassword.getText().toString();
 
@@ -62,8 +64,17 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
+                if (!validateEmail(emailVal)) {
+                    email.setError("Email ID is invalid!");
+                }
+
                 if (TextUtils.isEmpty(passwordVal)) {
                     password.setError("Password required!");
+                    return;
+                }
+
+                if (passwordVal.length() < 6) {
+                    email.setError("Password length should be atleast 6 characters!");
                     return;
                 }
 
@@ -88,9 +99,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "User successfully registered", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        }
-
-                        else {
+                        } else {
                             System.out.println("Failed");
                             System.out.println(task.getException());
                             dialog.dismiss();
@@ -108,5 +117,12 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
+    }
+
+    private boolean validateEmail(String emailVal) {
+        String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+        return Pattern.compile(regexPattern)
+                .matcher(emailVal)
+                .matches();
     }
 }

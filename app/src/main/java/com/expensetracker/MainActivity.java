@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailVal = email.getText().toString().trim();
+                String emailVal = email.getText().toString().trim().toLowerCase();
                 String passwordVal = password.getText().toString().trim();
 
                 if (TextUtils.isEmpty(emailVal)) {
