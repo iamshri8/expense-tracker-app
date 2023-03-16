@@ -73,12 +73,10 @@ public class MainActivity extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login successful.", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
                             intent.putExtra("welcomeMessage", "Welcome ".concat(emailVal));
                             startActivity(intent);
-                        }
-
-                        else {
+                        } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login failed. Please check the username or the password.", Toast.LENGTH_SHORT).show();
                         }
