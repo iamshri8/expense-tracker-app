@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:theme="@style/Theme.ExpenseTracker"
     tools:context="com.expensetracker.DashboardActivity">
 
@@ -110,7 +111,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_add_transaction"
         android:layout_width="144dp"
         android:layout_height="140dp"
         android:layout_alignParentBottom="true"
