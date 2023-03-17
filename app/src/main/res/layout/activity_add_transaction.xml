@@ -31,21 +31,13 @@
             android:layout_height="100dp"
             android:id="@+id/note_add_transaction" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-            <RadioButton
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:text="Income"
-                android:textSize="18sp"
-                android:textColor="@color/black" />
+            android:layout_marginTop="5dp"
+            android:id="@+id/radio_group_income_expense">
 
             <RadioButton
                 android:layout_weight="1"
@@ -54,9 +46,21 @@
                 android:layout_height="wrap_content"
                 android:text="Expense"
                 android:textSize="18sp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:checked="true"
+                android:id="@+id/radio_btn_expense" />
 
-        </LinearLayout>
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:id="@+id/radio_btn_income" />
+
+        </RadioGroup>
 
         <Button
             android:layout_width="match_parent"
