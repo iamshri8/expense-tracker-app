@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.ExpenseTracker"
+    tools:context="com.expensetracker.AddTransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Amount"
+            android:inputType="number"
+            android:id="@+id/amount_add_transaction" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint="Note"
+            android:textAlignment="textStart"
+            android:inputType="text"
+            android:layout_height="100dp"
+            android:id="@+id/note_add_transaction" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Expense"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD TRANSACTION"
+            android:id="@+id/add_transaction_button"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/purple_500" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

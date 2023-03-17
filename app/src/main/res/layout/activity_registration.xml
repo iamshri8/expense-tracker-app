@@ -23,8 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="@string/email_hint"
-                android:id="@+id/email_reg"
-                />
+                android:id="@+id/email_reg" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -32,8 +31,7 @@
                 android:layout_margin="10dp"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword"
-                android:id="@+id/password_reg"
-                />
+                android:id="@+id/password_reg" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -41,8 +39,7 @@
                 android:layout_margin="10dp"
                 android:hint="@string/confirm_password_reg_hint"
                 android:inputType="textPassword"
-                android:id="@+id/repeat_password_reg"
-                />
+                android:id="@+id/repeat_password_reg" />
 
             <Button
                 android:layout_width="match_parent"
@@ -50,7 +47,8 @@
                 android:layout_margin="5dp"
                 android:text="@string/sign_up_reg_button"
                 android:id="@+id/sign_up_reg_button"
-                />
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_500" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -58,8 +56,7 @@
                 android:gravity="center"
                 android:id="@+id/sign_in_reg"
                 android:text="@string/sign_in_from_reg"
-                android:padding="5dp"
-                />
+                android:padding="5dp" />
 
         </LinearLayout>
 
