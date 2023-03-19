@@ -100,8 +100,6 @@ public class RegistrationActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "User successfully registered", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
-                            System.out.println("Failed");
-                            System.out.println(task.getException());
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Registration failed. Please try again later!", Toast.LENGTH_SHORT).show();
                         }

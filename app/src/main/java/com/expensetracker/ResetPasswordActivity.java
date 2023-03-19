@@ -58,11 +58,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Reset password instruction sent to your email id.", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        }
-
-                        else {
-                            System.out.println("Failed");
-                            System.out.println(task.getException());
+                        } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Reset password failed. Please try again later!", Toast.LENGTH_SHORT).show();
                         }
